@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "aa8dc583-b8ec-48d5-8afb-c0941c28562b",
+		"name": "Zaliczenie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25769084"
+	},
+	"item": [
+		{
+			"name": "task 02 - get date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/heartbeat",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 03 -post new ad",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ania:123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Lexus NX350\",\r\n    \"description\": \"Nowy Plug-in\",\r\n    \"category\": \"samochody\",\r\n    \"tags\": [\r\n        \"nowe\",\r\n        \"plug-in\"\r\n    ],\r\n    \"price\": 1800\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/ads",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 04 - get ad by id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492bf84f3e62ae13a321a11",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492bf84f3e62ae13a321a11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 04 - get ad by wrong id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/64897b20e7bb6a7f5f543a78",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"64897b20e7bb6a7f5f543a78"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 04 - get ad by id (text/plain)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492bf84f3e62ae13a321a11",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492bf84f3e62ae13a321a11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 04 - get ad by id (text/html)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492bf84f3e62ae13a321a11",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492bf84f3e62ae13a321a11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 04 - get ad by id (aplication/json)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492bf84f3e62ae13a321a11",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492bf84f3e62ae13a321a11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 05 - get ads",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "justyna:pass",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 06 - delete ad",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ania:123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492cb6ffa9c9e8088fb431a",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492cb6ffa9c9e8088fb431a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 06 - delete ad (not authorized)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "zosia",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "wojtek:123",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "justyna:pass",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/64897acfe7bb6a7f5f543a6f",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"64897acfe7bb6a7f5f543a6f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 07 - update ad",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "justyna:pass",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Opel Corsa używana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492bac1d52d1d73acd7ad68",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492bac1d52d1d73acd7ad68"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 07 - update ad (not authorized)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ania:123",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "zosia",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "wojtek:123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Opel Corsa używana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/ads/6492bac1d52d1d73acd7ad68",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads",
+						"6492bac1d52d1d73acd7ad68"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 08 - get ads by filters",
+			"request": {
+				"auth": {
+					"type": "basic"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads?tags=now&title=Lex&priceStart=1000&priceEnd=160000&dateStart=2023-06-13T00:00:00.000Z&dateEnd=2023-06-22T00:00:00.000Z",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "now"
+						},
+						{
+							"key": "title",
+							"value": "Lex"
+						},
+						{
+							"key": "priceStart",
+							"value": "1000"
+						},
+						{
+							"key": "priceEnd",
+							"value": "160000"
+						},
+						{
+							"key": "dateStart",
+							"value": "2023-06-13T00:00:00.000Z"
+						},
+						{
+							"key": "dateEnd",
+							"value": "2023-06-22T00:00:00.000Z"
+						},
+						{
+							"key": "description",
+							"value": "zabud",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 08 - get ads by filters (no matches)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/ads?priceStart=3&priceEnd=16&dateStart=2023-06-13T00:00:00.000Z&dateEnd=2023-06-14T00:00:00.000Z",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ads"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "ta",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "lod",
+							"disabled": true
+						},
+						{
+							"key": "priceStart",
+							"value": "3"
+						},
+						{
+							"key": "priceEnd",
+							"value": "16"
+						},
+						{
+							"key": "dateStart",
+							"value": "2023-06-13T00:00:00.000Z"
+						},
+						{
+							"key": "dateEnd",
+							"value": "2023-06-14T00:00:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 11 - create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"login\": \"zosia\",\r\n   \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/users",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 11 - create new user (no credentials)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"zosia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/users",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 13 - req on invalid url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/adss/64897b20e7bb6a7f5f543a72",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"adss",
+						"64897b20e7bb6a7f5f543a72"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "ta",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "lod",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "4700",
+			"type": "string"
+		}
+	]
+}
